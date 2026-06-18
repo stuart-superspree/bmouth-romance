@@ -6,11 +6,11 @@ A free, phone-friendly web companion for the **Romance Writing Festival**, Bourn
 
 | Path | What it is |
 |---|---|
-| `public/index.html` | **The app** — the self-contained file that gets served. |
-| `public/serve.json` | Caching / security headers for the static server. |
+| `index.html` | **The app** — the self-contained file served at the homepage. |
+| `serve.json` | Static-server config (no directory listing; any path serves the app). |
 | `package.json`, `package-lock.json` | Declares the `serve` static server + start script. |
 | `railway.toml` | Railway deployment config. |
-| `src/app3.src.html` | Editable source. The app is precompiled from here (see HANDOFF.md). |
+| `src/app3.src.html` | Editable source. The app is precompiled from here. |
 | `USER_OVERVIEW.md` | Plain-language overview of features and intended use. |
 
 ## Run it locally
@@ -19,9 +19,7 @@ A free, phone-friendly web companion for the **Romance Writing Festival**, Bourn
 npm install
 npm start
 ```
-Then open the URL it prints (default http://localhost:3000).
-
-> You can also just double-click `public/index.html` — it needs internet on first load for fonts/libraries.
+Then open the URL it prints (default http://localhost:3000). You can also just double-click `index.html`.
 
 ## Publish to GitHub
 
@@ -36,13 +34,11 @@ git push -u origin main
 
 ## Deploy on Railway
 
-1. Go to railway.com → **New Project → Deploy from GitHub repo** and pick this repo.
-2. Railway auto-detects Node (NIXPACKS), runs `npm install`, then `npm start` (from `railway.toml`).
-3. When the deploy is healthy, open **Settings → Networking → Generate Domain** to get a public URL.
-4. Done. Every `git push` to `main` redeploys automatically.
-
-No environment variables or secrets are needed.
+1. railway.com → **New Project → Deploy from GitHub repo** → pick this repo.
+2. Railway auto-detects Node, runs `npm install`, then `npm start` (serves the repo root).
+3. **Settings → Networking → Generate Domain** for a public URL.
+4. Every push to `main` redeploys automatically. No env vars needed.
 
 ## Updating the app
 
-Edit `src/app3.src.html`, rebuild (see `HANDOFF.md`), copy the build to `public/index.html`, then commit and push — Railway redeploys on push.
+Edit `src/app3.src.html`, rebuild, copy the build over `index.html`, then commit and push.

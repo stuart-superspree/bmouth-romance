@@ -29,3 +29,6 @@ HANDOFF.md
 
 # Root preview copy — the deployed artifact is public/index.html
 rwf-companion-v1.html
+
+# Superseded folder (app now served from repo root)
+public/

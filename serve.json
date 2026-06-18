@@ -1,8 +1,9 @@
 {
   "cleanUrls": false,
   "trailingSlash": false,
+  "directoryListing": false,
   "rewrites": [
-    { "source": "/", "destination": "/cosby-yarn-bomb-v5.html" }
+    { "source": "**", "destination": "/index.html" }
   ],
   "headers": [
     {
@@ -11,12 +12,6 @@
         { "key": "Cache-Control", "value": "public, max-age=300, must-revalidate" },
         { "key": "X-Content-Type-Options", "value": "nosniff" },
         { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
-      ]
-    },
-    {
-      "source": "**/*.@(js|css|svg|png|jpg|jpeg|webp|woff2)",
-      "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=86400" }
       ]
     }
   ]
