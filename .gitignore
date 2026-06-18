@@ -1,0 +1,31 @@
+# Node / npm
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+# package-lock.json IS committed — locks exact dep versions for reproducible Railway builds
+
+# OS junk
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*~
+
+# Local env / secrets
+.env
+.env.local
+.env.*.local
+
+# Internal handoff doc — keep out of the public repo
+HANDOFF.md
+
+# MS Office temp/owner files
+~$*
+
+# Root preview copy — the deployed artifact is public/index.html
+rwf-companion-v1.html
