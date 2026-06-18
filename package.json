@@ -1,10 +1,10 @@
 {
-  "name": "romance-writing-companion",
+  "name": "cosby-yarn-bomb",
   "version": "2026.1.0",
   "private": true,
-  "description": "The Romance Writing Companion App — companion for the Romance Writing Festival, Bournemouth (3 Oct 2026).",
+  "description": "Cosby Yarn Bomb 2026 — Around the World in 80 Displays. Run by Gather Create Grow. Built by Superspree.",
   "scripts": {
-    "start": "serve public -l tcp://0.0.0.0:${PORT:-3000} --no-clipboard"
+    "start": "serve . -l tcp://0.0.0.0:${PORT:-3000} --no-clipboard"
   },
   "dependencies": {
     "serve": "^14.2.4"
