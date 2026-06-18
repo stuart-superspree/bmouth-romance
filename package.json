@@ -1,0 +1,15 @@
+{
+  "name": "romance-writing-companion",
+  "version": "2026.1.0",
+  "private": true,
+  "description": "The Romance Writing Companion App — companion for the Romance Writing Festival, Bournemouth (3 Oct 2026).",
+  "scripts": {
+    "start": "serve public -l tcp://0.0.0.0:${PORT:-3000} --no-clipboard"
+  },
+  "dependencies": {
+    "serve": "^14.2.4"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
